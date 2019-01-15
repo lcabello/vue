@@ -6,6 +6,8 @@
   </meta>
   <body>
     <div id="app">
+      <input type="text" v-on:input="changeName">
+      <!--Other option is @input=changeName-->
       <h1>Hello {{ name }}</h1>
     </div>
     <script src="vue.js"></script>
@@ -15,6 +17,11 @@
         data() {
           return {
             name: "world!"
+          }
+        },
+        methods: {
+          changeName: function (ev) {
+            this.name = event.target.value;
           }
         }
       });
