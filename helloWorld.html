@@ -8,9 +8,8 @@
     <div id="app">
       <input type="text" v-on:input="changeName">
       <!--Other option is @input=changeName-->
-      <h1>Hello {{ name }}</h1>
-      <p>{{ welcome() }} <a v-bind:href="link" target="_blank">VueJs</a></p>
-
+      <h1 v-once>Hello {{ name }}</h1>
+      <p>{{ welcome() }}  <a v-bind:href="link" target="_blank">VueJs</a></p>
     </div>
     <script src="vue.js"></script>
     <script>
