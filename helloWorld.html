@@ -9,6 +9,7 @@
       <input type="text" v-on:input="changeName">
       <!--Other option is @input=changeName-->
       <h1>Hello {{ name }}</h1>
+      <p>{{ welcome() }}</p>
     </div>
     <script src="vue.js"></script>
     <script>
@@ -22,6 +23,9 @@
         methods: {
           changeName: function (ev) {
             this.name = event.target.value;
+          },
+          welcome: function () {
+            return 'Welcome to this introduction to Vue'
           }
         }
       });
