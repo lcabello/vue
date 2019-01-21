@@ -10,6 +10,7 @@
       <!--Other option is @input=changeName-->
       <h1 v-once>Hello {{ name }}</h1>
       <p>{{ welcome() }}  <a v-bind:href="link" target="_blank">VueJs</a></p>
+      <p v-html="finalLink"></p>
     </div>
     <script src="vue.js"></script>
     <script>
@@ -18,7 +19,8 @@
         data() {
           return {
             name: "world!",
-            link: 'https://vuejs.org/v2/guide/'
+            link: 'https://vuejs.org/v2/guide/',
+            finalLink: '<a href="http://google.com" target="_blank">Google</a>'
           }
         },
         methods: {
