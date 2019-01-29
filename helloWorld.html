@@ -17,6 +17,9 @@
         Coordinates {{ x }} {{ y }} -
         <span @mousemove.stop> DEAD SPOT </span>
       </p>
+      <!--Working with v-model-->
+      <input type="text" v-model="name">
+      <p>{{name}}</p>
     </div>
     <script src="vue.js"></script>
     <script>
