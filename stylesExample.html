@@ -33,7 +33,8 @@
         :class="divClasses"
       ></div>
       <div class="demo"></div>
-      <div class="demo"></div>
+      <div class="demo" :class="[color, {red: attachRed}]"></div>
+      <input type="text" v-model="color"/>
     </div>
     <script src="vue.js"></script>
     <script>
@@ -41,7 +42,8 @@
         el: "#app",
         data() {
           return {
-            attachRed: false
+            attachRed: false,
+            color: 'green'
           }
         },
         computed: {
