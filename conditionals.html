@@ -6,10 +6,12 @@
   </meta>
   <body>
     <div id="app">
+      <!--v-if remove entirely from the dom-->
       <p v-if="show">You can see me!</p>
       <p v-else>Now you see me</p>
       <button @click="show = !show">Swticher</button>
-      <p>Do you also see me?</p>
+      <!--Use display: none-->
+      <p v-show="show">Do you also see me?</p>
     </div>
     <script src="vue.js"></script>
     <script>
