@@ -12,6 +12,10 @@
       <button @click="show = !show">Swticher</button>
       <!--Use display: none-->
       <p v-show="show">Do you also see me?</p>
+      <hr>
+      <ul>
+        <li v-for="ingredient in ingredients">{{ingredient}}</li>
+      </ul>
     </div>
     <script src="vue.js"></script>
     <script>
@@ -19,7 +23,8 @@
         el: "#app",
         data() {
           return {
-            show: true
+            show: true,
+            ingredients: ['meat', 'fruit', 'cookies']
           }
         }
       });
