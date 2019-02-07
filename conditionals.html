@@ -14,8 +14,13 @@
       <p v-show="show">Do you also see me?</p>
       <hr>
       <ul>
-        <li v-for="ingredient in ingredients">{{ingredient}}</li>
+        <li v-for="(ingredient, index) in ingredients">{{ingredient}}({{index}})</li>
       </ul>
+      <!--v-for in different elements-->
+      <template v-for="(ingredient, index) in ingredients">
+        <h5>{{ingredient}}</h1>
+        <p> {{index}}</p>
+      </template>
     </div>
     <script src="vue.js"></script>
     <script>
