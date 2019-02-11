@@ -21,6 +21,12 @@
         <h5>{{ingredient}}</h1>
         <p> {{index}}</p>
       </template>
+      <hr>
+      <ul>
+        <li v-for="person in persons">
+          <div v-for="(value, key, index) in person">{{key}} : {{value}} ({{index}})</div>
+        </li>
+      </ul>
     </div>
     <script src="vue.js"></script>
     <script>
@@ -29,7 +35,11 @@
         data() {
           return {
             show: true,
-            ingredients: ['meat', 'fruit', 'cookies']
+            ingredients: ['meat', 'fruit', 'cookies'],
+            persons: [
+              {name: 'Max', age: 27, color: 'red'},
+              {name: 'Anna', age: 'unknown', color: 'blue'}
+            ]
           }
         }
       });
