@@ -5,10 +5,13 @@
     <title>Instance example</title>
   </meta>
   <body>
-    <div id="app">
+    <div id="app1">
       <h1 ref="heading">{{ title }}</h1>
       <button v-on:click="show">Show Paragraph</button>
       <p v-if="showParagraph">This is not always visible</p>
+    </div>
+    <div id="app2">
+      <h1 ref="heading">{{ title }}</h1>
     </div>
     <script src="../vue.js"></script>
     <script src="app.js"></script>
