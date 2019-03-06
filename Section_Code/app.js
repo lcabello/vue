@@ -8,6 +8,8 @@ var vm1 = new Vue({
     show: function() {
       this.showParagraph = true;
       this.updateTitle('The VueJS Instance (Updated)');
+      //console.log(this.$refs.myButton);
+      this.$refs.myButton.innerText = 'Test';
     },
     updateTitle: function(title) {
       this.title = title;
